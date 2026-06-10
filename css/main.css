@@ -1,0 +1,28 @@
+
+:root {
+  --primary: #111111;
+  --secondary: #6A0DAD;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', system-ui, sans-serif; margin: 0; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+h1,h2,h3 { letter-spacing: -0.02em; }
+.dz-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.dz-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.18); }
+.style-neon { font-family: 'JetBrains Mono', monospace; }
+.neon-grid {
+  background-image: linear-gradient(rgba(139,43,226,0.08) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(139,43,226,0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.neon-glow { text-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary); }
+.neon-text { text-shadow: 0 0 30px var(--primary); }
+.parallax-section { transform: translateZ(0); will-change: transform; }
+.scroll-section { opacity: 0; transform: translateY(24px); animation: fadeUp 0.85s cubic-bezier(0.22,1,0.36,1) forwards; }
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+#service-grid > div, .grid > .dz-card { animation: fadeUp 0.7s ease forwards; }
+img { max-width: 100%; height: auto; }
+nav { backdrop-filter: blur(16px); }
+
+.hero-bg { background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100vh; }
+#dz-bridge-overlay { position: fixed; inset: 0; pointer-events: none; z-index: 9999; }
